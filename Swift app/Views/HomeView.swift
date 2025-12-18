@@ -6,7 +6,7 @@ struct HomeView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                LinearGradient(colors: [.black, Color(red: 0.1, green: 0.1, blue: 0.2)], startPoint: .top, endPoint: .bottom)
+                Color(.systemGroupedBackground)
                     .ignoresSafeArea()
                 content
                     .padding(.vertical, 12)
@@ -52,23 +52,27 @@ struct HomeView: View {
                         Text(viewModel.headline.uppercased())
                             .font(.subheadline.weight(.semibold))
                             .tracking(1)
-                            .foregroundStyle(.white.opacity(0.7))
+                            .foregroundStyle(.secondary)
                         Text("Dive into the stories everyone is talking about")
                             .font(.largeTitle.bold())
-                            .foregroundStyle(.white)
+                            .foregroundStyle(.primary)
                     }
                     if viewModel.items.isEmpty {
                         Text("No features are live right now.")
-                            .foregroundStyle(.white.opacity(0.7))
+                            .foregroundStyle(.secondary)
                     } else {
                         ScrollView(.horizontal, showsIndicators: false) {
-                            HStack(spacing: 20) {
+                            LazyHStack(spacing: 20) {
                                 ForEach(viewModel.items) { item in
-                                    HomeCard(item: item)
+                                    NavigationLink(destination: DetailsView(item: item)) {
+                                        HomeCard(item: item)
+                                    }
+                                    .buttonStyle(PlainButtonStyle())
+                                    .scrollTargetLayout() 
                                 }
                             }
-                            .padding(.vertical, 4)
                         }
+                        .scrollTargetBehavior(.viewAligned)
                     }
                 }
                 .padding(.horizontal, 20)
@@ -78,4 +82,8 @@ struct HomeView: View {
             }
         }
     }
+}
+
+#Preview {
+    HomeView()
 }
