@@ -6,11 +6,58 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		7BB97D142EF4344700E7033C /* newClips.app in Embed App Clips */ = {isa = PBXBuildFile; fileRef = 7BB97D052EF4344400E7033C /* newClips.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7BB97D122EF4344700E7033C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7BDF80482EEAFC9200BAADDF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7BB97D042EF4344400E7033C;
+			remoteInfo = newClips;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7BB97D152EF4344700E7033C /* Embed App Clips */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/AppClips";
+			dstSubfolderSpec = 16;
+			files = (
+				7BB97D142EF4344700E7033C /* newClips.app in Embed App Clips */,
+			);
+			name = "Embed App Clips";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		7BB97D052EF4344400E7033C /* newClips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = newClips.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BDF80502EEAFC9200BAADDF /* Swift app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		7BB97D182EF4344700E7033C /* Exceptions for "newClips" folder in "newClips" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 7BB97D042EF4344400E7033C /* newClips */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		7BB97D062EF4344400E7033C /* newClips */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				7BB97D182EF4344700E7033C /* Exceptions for "newClips" folder in "newClips" target */,
+			);
+			path = newClips;
+			sourceTree = "<group>";
+		};
 		7BDF80522EEAFC9200BAADDF /* Swift app */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "Swift app";
@@ -19,6 +66,13 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7BB97D022EF4344400E7033C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7BDF804D2EEAFC9200BAADDF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -33,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				7BDF80522EEAFC9200BAADDF /* Swift app */,
+				7BB97D062EF4344400E7033C /* newClips */,
 				7BDF80512EEAFC9200BAADDF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				7BDF80502EEAFC9200BAADDF /* Swift app.app */,
+				7BB97D052EF4344400E7033C /* newClips.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,6 +104,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7BB97D042EF4344400E7033C /* newClips */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BB97D192EF4344700E7033C /* Build configuration list for PBXNativeTarget "newClips" */;
+			buildPhases = (
+				7BB97D012EF4344400E7033C /* Sources */,
+				7BB97D022EF4344400E7033C /* Frameworks */,
+				7BB97D032EF4344400E7033C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				7BB97D062EF4344400E7033C /* newClips */,
+			);
+			name = newClips;
+			packageProductDependencies = (
+			);
+			productName = newClips;
+			productReference = 7BB97D052EF4344400E7033C /* newClips.app */;
+			productType = "com.apple.product-type.application.on-demand-install-capable";
+		};
 		7BDF804F2EEAFC9200BAADDF /* Swift app */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7BDF805E2EEAFC9500BAADDF /* Build configuration list for PBXNativeTarget "Swift app" */;
@@ -55,10 +133,12 @@
 				7BDF804C2EEAFC9200BAADDF /* Sources */,
 				7BDF804D2EEAFC9200BAADDF /* Frameworks */,
 				7BDF804E2EEAFC9200BAADDF /* Resources */,
+				7BB97D152EF4344700E7033C /* Embed App Clips */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				7BB97D132EF4344700E7033C /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				7BDF80522EEAFC9200BAADDF /* Swift app */,
@@ -80,6 +160,9 @@
 				LastSwiftUpdateCheck = 1610;
 				LastUpgradeCheck = 1610;
 				TargetAttributes = {
+					7BB97D042EF4344400E7033C = {
+						CreatedOnToolsVersion = 16.1;
+					};
 					7BDF804F2EEAFC9200BAADDF = {
 						CreatedOnToolsVersion = 16.1;
 					};
@@ -100,11 +183,19 @@
 			projectRoot = "";
 			targets = (
 				7BDF804F2EEAFC9200BAADDF /* Swift app */,
+				7BB97D042EF4344400E7033C /* newClips */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7BB97D032EF4344400E7033C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7BDF804E2EEAFC9200BAADDF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -115,6 +206,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7BB97D012EF4344400E7033C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7BDF804C2EEAFC9200BAADDF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -124,7 +222,87 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		7BB97D132EF4344700E7033C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7BB97D042EF4344400E7033C /* newClips */;
+			targetProxy = 7BB97D122EF4344700E7033C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		7BB97D162EF4344700E7033C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = newClips/newClips.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"newClips/Preview Content\"";
+				DEVELOPMENT_TEAM = X9R929CL3M;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = newClips/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Swift app";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "demoApp.Swift-app.Clip";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7BB97D172EF4344700E7033C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = newClips/newClips.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"newClips/Preview Content\"";
+				DEVELOPMENT_TEAM = X9R929CL3M;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = newClips/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Swift app";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "demoApp.Swift-app.Clip";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		7BDF805C2EEAFC9500BAADDF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -267,6 +445,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "demoApp.Swift-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -296,6 +478,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "demoApp.Swift-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -305,6 +491,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7BB97D192EF4344700E7033C /* Build configuration list for PBXNativeTarget "newClips" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BB97D162EF4344700E7033C /* Debug */,
+				7BB97D172EF4344700E7033C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		7BDF804B2EEAFC9200BAADDF /* Build configuration list for PBXProject "Swift app" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

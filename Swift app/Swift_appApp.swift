@@ -9,10 +9,14 @@ import SwiftUI
 
 @main
 struct Swift_appApp: App {
+    @StateObject private var authState = AuthState()
+
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .preferredColorScheme(.light)
+                .environmentObject(authState)
+
         }
     }
 }
+
