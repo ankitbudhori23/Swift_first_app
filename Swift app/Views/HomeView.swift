@@ -11,7 +11,6 @@ struct HomeView: View {
                 content
                     .padding(.vertical, 12)
             }
-            .navigationTitle("Spotlight")
         }
         .task {
             await viewModel.loadIfNeeded()
@@ -49,11 +48,7 @@ struct HomeView: View {
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(alignment: .leading, spacing: 24) {
                     VStack(alignment: .leading, spacing: 6) {
-                        Text(viewModel.headline.uppercased())
-                            .font(.subheadline.weight(.semibold))
-                            .tracking(1)
-                            .foregroundStyle(.secondary)
-                        Text("Dive into the stories everyone is talking about")
+                        Text("Home")
                             .font(.largeTitle.bold())
                             .foregroundStyle(.primary)
                     }

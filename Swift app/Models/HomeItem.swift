@@ -11,6 +11,7 @@ struct HomeItem: Identifiable, Decodable {
     let description: String?
     let thumbnailUrl: String?
     let vthumbnailUrl: String?
+    let hls: String?
     let category: [String]?
     let dViews: Int?
     let ratings: Double?
@@ -53,5 +54,10 @@ struct HomeItem: Identifiable, Decodable {
     var ratingLabel: String {
         guard let ratings, ratings > 0 else { return "NR" }
         return String(format: "%.1f", ratings)
+    }
+
+    var streamURL: URL? {
+        guard let hls, let url = URL(string: hls) else { return nil }
+        return url
     }
 }
